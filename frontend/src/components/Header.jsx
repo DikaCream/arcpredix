@@ -5,19 +5,15 @@ export default function Header({ wallet, onConnect, darkMode, toggleDark }) {
       background:"var(--surface)", borderBottom:"1px solid var(--border)",
       position:"sticky", top:0, zIndex:40,
       padding:"0 20px", height:"60px",
-      display:"flex", alignItems:"center",
-      boxShadow:"0 1px 8px rgba(0,0,0,0.06)",
-      position:"relative"
+      display:"grid", gridTemplateColumns:"1fr auto 1fr", alignItems:"center",
+      boxShadow:"0 1px 8px rgba(0,0,0,0.06)"
     }}>
-      {/* Centered title */}
-      <div style={{
-        position:"absolute", left:"50%", transform:"translateX(-50%)",
-        fontWeight:800, fontSize:16, color:"var(--text)", letterSpacing:"-0.01em"
-      }}>
+      <div/>
+      <div style={{ fontWeight:800, fontSize:16, color:"var(--text)", textAlign:"center" }}>
         ArcPredix
       </div>
 
-      <div style={{ display:"flex", alignItems:"center", gap:10, marginLeft:"auto" }}>
+      <div style={{ display:"flex", alignItems:"center", gap:10, justifyContent:"flex-end" }}>
         {/* Dark mode toggle — mobile only */}
         <button onClick={toggleDark} style={{
           background:"var(--light)", border:"1px solid var(--border)",
