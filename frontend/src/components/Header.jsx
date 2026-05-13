@@ -9,10 +9,18 @@ export default function Header({ wallet, onConnect, darkMode, toggleDark }) {
     }}>
       {/* Left: Logo + Name */}
       <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-        <div style={{ width:28, height:28, borderRadius:8,
-          background:"linear-gradient(135deg,#4F46E5,#7C3AED)",
-          display:"flex", alignItems:"center", justifyContent:"center",
-          fontSize:14, flexShrink:0 }}>👾</div>
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <rect width="30" height="30" rx="8" fill="url(#grad)"/>
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="30" y2="30">
+              <stop offset="0%" stopColor="#4F46E5"/>
+              <stop offset="100%" stopColor="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <path d="M8 20 L15 10 L22 20" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          <circle cx="15" cy="10" r="2" fill="white"/>
+          <line x1="10" y1="23" x2="20" y2="23" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.6"/>
+        </svg>
         <span style={{ fontWeight:800, fontSize:15, color:"var(--text)" }}>ArcPredix</span>
       </div>
 
