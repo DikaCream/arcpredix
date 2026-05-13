@@ -90,9 +90,10 @@ a { text-decoration:none; color:inherit; }
 
 /* ── Layout ── */
 .app-layout { display:flex; min-height:100vh; flex-direction:column; }
+.sidebar { display:none; }
 @media(min-width:768px) {
   .app-layout { flex-direction:row; }
-  .sidebar { width:240px; min-height:100vh; background:var(--surface); border-right:1px solid var(--border); padding:20px 16px; position:sticky; top:0; height:100vh; overflow-y:auto; flex-shrink:0; }
+  .sidebar { display:flex; flex-direction:column; width:240px; min-height:100vh; background:var(--surface); border-right:1px solid var(--border); padding:20px 16px; position:sticky; top:0; height:100vh; overflow-y:auto; flex-shrink:0; }
   .main-content { flex:1; max-width:calc(100% - 240px); }
 }
 

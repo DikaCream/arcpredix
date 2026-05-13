@@ -5,12 +5,15 @@ export default function Header({ wallet, onConnect, darkMode, toggleDark }) {
       background:"var(--surface)", borderBottom:"1px solid var(--border)",
       position:"sticky", top:0, zIndex:40,
       padding:"0 20px", height:"60px",
-      display:"flex", alignItems:"center", justifyContent:"space-between",
-      boxShadow:"0 1px 8px rgba(0,0,0,0.06)"
+      display:"flex", alignItems:"center",
+      boxShadow:"0 1px 8px rgba(0,0,0,0.06)",
+      position:"relative"
     }}>
-      {/* Mobile: show title. Desktop: hidden (sidebar has it) */}
-      <div style={{ fontWeight:800, fontSize:16, color:"var(--text)" }}
-           className="md-hidden">
+      {/* Centered title */}
+      <div style={{
+        position:"absolute", left:"50%", transform:"translateX(-50%)",
+        fontWeight:800, fontSize:16, color:"var(--text)", letterSpacing:"-0.01em"
+      }}>
         ArcPredix
       </div>
 
